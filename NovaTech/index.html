@@ -45,7 +45,9 @@
       --cyan: #2DE2E6;
       --violet: #A855F7;
     }
+    html{ scroll-behavior: smooth; scroll-padding-top: 6rem; }
     *{ scroll-behavior: smooth; }
+    section[id]{ scroll-margin-top: 6rem; }
     body{
       background-color: #060915;
       background-image:
@@ -134,15 +136,45 @@
       opacity: 0; transform: translateY(24px);
       transition: opacity .7s ease, transform .7s ease;
     }
+    .stat-card{ min-width: 0; }
     .fade-in.show{ opacity: 1; transform: translateY(0); }
 
     .portfolio-card{ transition: transform .4s ease; }
     .portfolio-card:hover{ transform: translateY(-6px); }
 
+    .back-to-top{
+      opacity: 0;
+      transform: translateY(12px);
+      pointer-events: none;
+      transition: opacity .3s ease, transform .3s ease, box-shadow .3s ease;
+    }
+    .back-to-top.show{
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+    .about-shell::before{
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(45,226,230,0.12), rgba(168,85,247,0.12));
+      pointer-events: none;
+    }
+
     ::selection{ background: rgba(45,226,230,0.35); color: #fff; }
+
+    @media (max-width: 767px){
+      html{ scroll-padding-top: 5.5rem; }
+      section[id]{ scroll-margin-top: 5.5rem; }
+      .stat-card{ padding: 0.75rem 0.5rem; }
+    }
 
     @media (prefers-reduced-motion: reduce){
       .float-slow, .float-slower, .pulse-dot{ animation: none; }
+    }
+
+    :target {
+      scroll-margin-top: 6rem;
     }
   </style>
 </head>
@@ -225,16 +257,16 @@
       </a>
     </div>
 
-    <div class="fade-in mt-16 grid grid-cols-3 gap-4 max-w-lg mx-auto text-center">
-      <div>
+    <div class="fade-in mt-16 grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-lg mx-auto text-center">
+      <div class="stat-card rounded-xl border border-slate-700/40 bg-white/5 px-3 py-4">
         <p class="text-2xl md:text-3xl font-black text-white">+40</p>
         <p class="text-xs md:text-sm text-slate-400" data-ar="مشروع منجز" data-en="Projects Delivered">مشروع منجز</p>
       </div>
-      <div class="border-x border-slate-700/60">
+      <div class="stat-card rounded-xl border border-slate-700/40 bg-white/5 px-3 py-4 sm:border-x sm:border-y-0">
         <p class="text-2xl md:text-3xl font-black text-white">98%</p>
         <p class="text-xs md:text-sm text-slate-400" data-ar="رضا العملاء" data-en="Client Satisfaction">رضا العملاء</p>
       </div>
-      <div>
+      <div class="stat-card rounded-xl border border-slate-700/40 bg-white/5 px-3 py-4">
         <p class="text-2xl md:text-3xl font-black text-white">24/7</p>
         <p class="text-xs md:text-sm text-slate-400" data-ar="دعم فني" data-en="Technical Support">دعم فني</p>
       </div>
@@ -435,14 +467,45 @@
 </section>
 
 <!-- ============ ABOUT (brief) ============ -->
-<section id="about" class="relative z-10 px-5 md:px-8 py-20 md:py-28 max-w-5xl mx-auto text-center">
-  <p class="text-cyan-400 font-mono text-sm mb-3 tracking-widest fade-in" data-ar="// من نحن" data-en="// About Us">// من نحن</p>
-  <h2 class="fade-in text-3xl md:text-5xl font-black text-white mb-6" data-ar="فريق شغوف بالتقنية والنتائج" data-en="A Team Obsessed With Tech & Results">فريق شغوف بالتقنية والنتائج</h2>
-  <p class="fade-in text-slate-400 text-base md:text-lg leading-relaxed max-w-3xl mx-auto"
-     data-ar="في NovaTech، نجمع بين خبرة هندسية عميقة ورؤية تصميمية حديثة لنبني منتجات رقمية تنافس عالمياً. نؤمن أن كل مشروع يستحق كوداً نظيفاً، وتصميماً مدروساً، وشراكة حقيقية من الفكرة حتى الإطلاق."
-     data-en="At NovaTech, we combine deep engineering expertise with a modern design sensibility to build digital products that compete globally. We believe every project deserves clean code, thoughtful design, and a real partnership from idea to launch.">
-    في NovaTech، نجمع بين خبرة هندسية عميقة ورؤية تصميمية حديثة لنبني منتجات رقمية تنافس عالمياً. نؤمن أن كل مشروع يستحق كوداً نظيفاً، وتصميماً مدروساً، وشراكة حقيقية من الفكرة حتى الإطلاق.
-  </p>
+<section id="about" class="relative z-10 px-5 md:px-8 py-20 md:py-28 max-w-6xl mx-auto" data-section="about">
+  <div class="about-shell glass rounded-[28px] p-8 md:p-10 lg:p-12 relative overflow-hidden">
+    <div class="relative grid lg:grid-cols-[1.1fr_0.9fr] gap-8 items-center">
+      <div class="text-center lg:text-right">
+        <p class="text-cyan-400 font-mono text-sm mb-3 tracking-widest fade-in" data-ar="// من نحن" data-en="// About Us">// من نحن</p>
+        <h2 class="fade-in text-3xl md:text-5xl font-black text-white mb-6" data-ar="فريق شغوف بالتقنية والنتائج" data-en="A Team Obsessed With Tech & Results">فريق شغوف بالتقنية والنتائج</h2>
+        <p class="fade-in text-slate-400 text-base md:text-lg leading-relaxed max-w-3xl mx-auto lg:mx-0"
+           data-ar="في NovaTech، نجمع بين خبرة هندسية عميقة ورؤية تصميمية حديثة لنبني منتجات رقمية تنافس عالمياً. نؤمن أن كل مشروع يستحق كوداً نظيفاً، وتصميماً مدروساً، وشراكة حقيقية من الفكرة حتى الإطلاق."
+           data-en="At NovaTech, we combine deep engineering expertise with a modern design sensibility to build digital products that compete globally. We believe every project deserves clean code, thoughtful design, and a real partnership from idea to launch.">
+          في NovaTech، نجمع بين خبرة هندسية عميقة ورؤية تصميمية حديثة لنبني منتجات رقمية تنافس عالمياً. نؤمن أن كل مشروع يستحق كوداً نظيفاً، وتصميماً مدروساً، وشراكة حقيقية من الفكرة حتى الإطلاق.
+        </p>
+        <div class="fade-in mt-8 flex flex-wrap justify-center lg:justify-start gap-3">
+          <span class="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1.5 text-sm text-cyan-300" data-ar="كود نظيف" data-en="Clean Code">كود نظيف</span>
+          <span class="rounded-full border border-violet-400/20 bg-violet-400/10 px-3 py-1.5 text-sm text-violet-300" data-ar="تصميم احترافي" data-en="Professional Design">تصميم احترافي</span>
+          <span class="rounded-full border border-slate-600/60 bg-white/5 px-3 py-1.5 text-sm text-slate-300" data-ar="شراكة حقيقية" data-en="Real Partnership">شراكة حقيقية</span>
+        </div>
+      </div>
+
+      <div class="fade-in rounded-2xl border border-slate-700/60 bg-slate-950/40 p-6 md:p-7">
+        <div class="flex items-center gap-3 mb-5">
+          <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-400 to-violet-500 text-ink font-black">N</div>
+          <div>
+            <p class="text-sm font-semibold text-cyan-300" data-ar="منصة رقمية حديثة" data-en="Modern Digital Studio">منصة رقمية حديثة</p>
+            <p class="text-xs text-slate-400" data-ar="بناء حلول تركز على النتائج" data-en="Building results-driven solutions">بناء حلول تركز على النتائج</p>
+          </div>
+        </div>
+        <div class="space-y-3 text-sm text-slate-300">
+          <div class="rounded-xl border border-slate-700/60 bg-white/5 p-3">
+            <p class="font-semibold text-white" data-ar="التركيز على المستخدم" data-en="User-first thinking">التركيز على المستخدم</p>
+            <p class="text-slate-400 mt-1" data-ar="نصمم تجارب تضع العميل في قلب القرار." data-en="We design experiences that put the client at the center of every decision.">نصمم تجارب تضع العميل في قلب القرار.</p>
+          </div>
+          <div class="rounded-xl border border-slate-700/60 bg-white/5 p-3">
+            <p class="font-semibold text-white" data-ar="سرعة واحترافية" data-en="Speed and professionalism">سرعة واحترافية</p>
+            <p class="text-slate-400 mt-1" data-ar="نقدّم نتائج سريعة مع جودة عالية من أول يوم." data-en="We deliver fast results without compromising quality from day one.">نقدّم نتائج سريعة مع جودة عالية من أول يوم.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- ============ CONTACT / FOOTER ============ -->
@@ -485,6 +548,10 @@
   </div>
 </footer>
 
+<button id="backToTop" class="back-to-top fixed bottom-6 left-6 z-[60] inline-flex h-12 w-12 items-center justify-center rounded-full border border-cyan-400/30 bg-slate-950/90 text-cyan-300 shadow-glow-cyan backdrop-blur" aria-label="Back to top">
+  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 15 7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
 <script>
   // ---------- Language toggle ----------
   let currentLang = 'ar';
@@ -512,6 +579,47 @@
   const mobileMenu = document.getElementById('mobileMenu');
   menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
   mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+
+  // ---------- Smooth in-page navigation ----------
+  function scrollToSection(selector) {
+    const target = document.querySelector(selector);
+    if (!target) return;
+    const rect = target.getBoundingClientRect();
+    const top = Math.max(rect.top + window.scrollY - 90, 0);
+    window.scrollTo({ top, behavior: 'auto' });
+  }
+
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', (event) => {
+      const href = link.getAttribute('href');
+      if (!href || href === '#') return;
+      event.preventDefault();
+      location.hash = href;
+      scrollToSection(href);
+      if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.add('hidden');
+      }
+    });
+  });
+
+  window.addEventListener('hashchange', () => {
+    scrollToSection(window.location.hash);
+  });
+
+  // ---------- Back to top button ----------
+  const backToTop = document.getElementById('backToTop');
+  const showBackToTop = () => {
+    if (window.scrollY > 350) {
+      backToTop.classList.add('show');
+    } else {
+      backToTop.classList.remove('show');
+    }
+  };
+  window.addEventListener('scroll', showBackToTop, { passive: true });
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+  showBackToTop();
 
   // ---------- Scroll reveal ----------
   const observer = new IntersectionObserver((entries) => {
