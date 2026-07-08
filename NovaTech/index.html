@@ -6,7 +6,6 @@
   <title>NovaTech | نوفاتك</title>
   <meta name="google-site-verification" content="v6Cz7lUZfAbgsNoLKRFS8HBKBAL1GUuuX1RQFt4O6_E" />
   
-  <!-- الـ Meta Tags الخاصة بالـ SEO لتصدر نتائج البحث في جوجل -->
   <meta name="description" content="وكالة NovaTech لتصميم وتطوير مواقع الويب الاحترافية في الإسكندرية. نساعد الشركات والعيادات على بناء هويتها الرقمية بأحدث التقنيات.">
   <meta name="keywords" content="تصميم مواقع, تطوير ويب, NovaTech, مبرمج في الاسكندرية, إنشاء موقع لعيادة, Elite Dental Clinic, خدمات برمجية">
   <meta name="author" content="Ahmed Mohsen">
@@ -133,11 +132,10 @@
     .float-slower{ animation: float 9s ease-in-out infinite; animation-delay: -3s; }
 
     .fade-in{
-      opacity: 0; transform: translateY(24px);
+      opacity: 1; transform: translateY(0);
       transition: opacity .7s ease, transform .7s ease;
     }
     .stat-card{ min-width: 0; }
-    .fade-in.show{ opacity: 1; transform: translateY(0); }
 
     .portfolio-card{ transition: transform .4s ease; }
     .portfolio-card:hover{ transform: translateY(-6px); }
@@ -172,10 +170,6 @@
     @media (prefers-reduced-motion: reduce){
       .float-slow, .float-slower, .pulse-dot{ animation: none; }
     }
-
-    :target {
-      scroll-margin-top: 6rem;
-    }
   </style>
 </head>
 
@@ -183,7 +177,6 @@
 
 <div class="grid-overlay"></div>
 
-<!-- ============ NAVBAR ============ -->
 <header class="sticky top-0 z-50">
   <nav class="glass mx-3 mt-3 rounded-2xl px-5 py-3 flex items-center justify-between md:mx-6 md:mt-4 md:px-8">
     <a href="#home" class="flex items-center gap-2 shrink-0">
@@ -212,7 +205,6 @@
     </div>
   </nav>
 
-  <!-- mobile menu -->
   <div id="mobileMenu" class="hidden md:hidden glass mx-3 mt-2 rounded-2xl px-5 py-4 flex flex-col gap-4 font-semibold text-slate-300" data-testid="mobile-menu">
     <a href="#services" data-ar="خدماتنا" data-en="Services" data-testid="mobile-nav-services-link">خدماتنا</a>
     <a href="#pricing" data-ar="باقاتنا" data-en="Pricing" data-testid="mobile-nav-pricing-link">باقاتنا</a>
@@ -222,7 +214,6 @@
   </div>
 </header>
 
-<!-- ============ HERO ============ -->
 <section id="home" class="relative z-10 px-5 md:px-8 pt-16 pb-24 md:pt-24 md:pb-32 max-w-7xl mx-auto">
   <div class="absolute -top-10 right-1/4 w-72 h-72 bg-violet-600/20 rounded-full blur-[100px] float-slow"></div>
   <div class="absolute top-40 left-10 w-64 h-64 bg-cyan-400/15 rounded-full blur-[100px] float-slower"></div>
@@ -274,42 +265,38 @@
   </div>
 </section>
 
-<!-- ============ SERVICES ============ -->
-<section id="services" role="region" aria-labelledby="servicesHeading" data-testid="services-section" class="relative z-10 px-5 md:px-8 py-20 md:py-28 max-w-7xl mx-auto">
+<section id="services" role="region" aria-label="Services Section" data-testid="services-section" class="relative z-10 px-5 md:px-8 py-20 md:py-28 max-w-7xl mx-auto">
   <div class="text-center max-w-2xl mx-auto mb-16 fade-in">
-    <p class="text-cyan-400 font-mono text-sm mb-3 tracking-widest" data-ar="// خدماتنا" data-en="// Our Services">// خدماتنا</p>
-    <h2 id="servicesHeading" class="text-3xl md:text-5xl font-black text-white" data-ar="حلول رقمية متكاملة" data-en="Complete Digital Solutions">حلول رقمية متكاملة</h2>
+    <p class="text-cyan-400 font-mono text-sm mb-3 tracking-widest" data-ar="// خدماتنا" data-en="// Our Services">// Our Services</p>
+    <h2 class="text-3xl md:text-5xl font-black text-white" data-ar="حلول رقمية متكاملة" data-en="Complete Digital Solutions">Complete Digital Solutions / حلول رقمية متكاملة</h2>
   </div>
 
   <div class="grid md:grid-cols-3 gap-6">
-    <!-- Card 1 -->
     <div class="grad-border glass rounded-2xl p-8 fade-in">
       <div class="w-14 h-14 rounded-xl bg-cyan-400/10 flex items-center justify-center mb-6 border border-cyan-400/20">
         <svg class="w-7 h-7 text-cyan-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="m8 9-4 3 4 3M16 9l4 3-4 3M13 5l-2 14" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </div>
-      <h3 class="text-xl font-bold text-white mb-3" data-ar="تطوير المواقع" data-en="Web Development">تطوير المواقع</h3>
+      <h3 class="text-xl font-bold text-white mb-3" data-ar="تطوير المواقع" data-en="Web Development">Web Development / تطوير المواقع</h3>
       <p class="text-slate-400 leading-relaxed text-sm" data-ar="مواقع وتطبيقات ويب سريعة وآمنة مبنية بأحدث التقنيات، مع أداء عالٍ وتصميم متجاوب لكل الأجهزة."
          data-en="Fast, secure websites and web apps built with modern technology — high performance and fully responsive on every device.">
-        موقع وتطبيقات ويب سريعة وآمنة مبنية بأحدث التقنيات، مع أداء عالٍ وتصميم متجاوب لكل الأجهزة.
+        مواقع وتطبيقات ويب سريعة وآمنة مبنية بأحدث التقنيات، مع أداء عالٍ وتصميم متجاوب لكل الأجهزة.
       </p>
     </div>
-    <!-- Card 2 -->
     <div class="grad-border glass rounded-2xl p-8 fade-in">
       <div class="w-14 h-14 rounded-xl bg-violet-500/10 flex items-center justify-center mb-6 border border-violet-500/20">
         <svg class="w-7 h-7 text-violet-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 9h16M9 9v11" stroke-linecap="round"/></svg>
       </div>
-      <h3 class="text-xl font-bold text-white mb-3" data-ar="تصميم واجهات المستخدم" data-en="UI/UX Design">تصميم واجهات المستخدم</h3>
+      <h3 class="text-xl font-bold text-white mb-3" data-ar="تصميم واجهات المستخدم" data-en="UI/UX Design">UI/UX Design / تصميم واجهات المستخدم</h3>
       <p class="text-slate-400 leading-relaxed text-sm" data-ar="تصاميم عصرية تركز على تجربة المستخدم، تجمع بين الجمال والوظيفة لتحويل الزوار إلى عملاء."
          data-en="Modern, user-centered designs that blend beauty and function — turning visitors into loyal customers.">
         تصاميم عصرية تركز على تجربة المستخدم، تجمع بين الجمال والوظيفة لتحويل الزوار إلى عملاء.
       </p>
     </div>
-    <!-- Card 3 -->
     <div class="grad-border glass rounded-2xl p-8 fade-in">
       <div class="w-14 h-14 rounded-xl bg-cyan-400/10 flex items-center justify-center mb-6 border border-cyan-400/20">
         <svg class="w-7 h-7 text-cyan-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1" stroke-linecap="round"/></svg>
       </div>
-      <h3 class="text-xl font-bold text-white mb-3" data-ar="حلول الذكاء الاصطناعي" data-en="AI Solutions">حلول الذكاء الاصطناعي</h3>
+      <h3 class="text-xl font-bold text-white mb-3" data-ar="حلول الذكاء الاصطناعي" data-en="AI Solutions">AI Solutions / حلول الذكاء الاصطناعي</h3>
       <p class="text-slate-400 leading-relaxed text-sm" data-ar="دمج الذكاء الاصطناعي في أعمالك عبر شات بوتات ذكية وأتمتة العمليات لتوفير الوقت وزيادة الكفاءة."
          data-en="Integrate AI into your business with smart chatbots and process automation — saving time and boosting efficiency.">
         دمج الذكاء الاصطناعي في أعمالك عبر شات بوتات ذكية وأتمتة العمليات لتوفير الوقت وزيادة الكفاءة.
@@ -318,105 +305,13 @@
   </div>
 </section>
 
-<!-- ============ SKILLS ============ -->
-<section class="relative z-10 px-5 md:px-8 py-6 md:py-8 max-w-7xl mx-auto">
-  <div class="glass rounded-2xl p-6 md:p-8 fade-in">
-    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
-      <div>
-        <p class="text-cyan-400 font-mono text-sm mb-2 tracking-widest" data-ar="// المهارات" data-en="// Skills">// المهارات</p>
-        <h3 class="text-2xl md:text-3xl font-black text-white" data-ar="أدواتنا المفضلة في التصميم والاختبار" data-en="Our Favorite Tools for Design & Testing">أدواتنا المفضلة في التصميم والاختبار</h3>
-      </div>
-    </div>
-
-    <div class="grid md:grid-cols-2 gap-6 mt-8">
-      <div class="rounded-2xl border border-cyan-400/20 bg-cyan-400/5 p-6">
-        <div class="flex items-center gap-3 mb-4">
-          <span class="text-xl font-black text-white">UI/UX Pro Max</span>
-          <span class="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-2.5 py-1 text-[11px] font-semibold text-cyan-300" data-ar="تصميم" data-en="Design">Design</span>
-        </div>
-        <p class="text-slate-400 leading-relaxed text-sm" data-ar="نستخدم UI/UX Pro Max لتصميم واجهات بديهية واحترافية تركز على تجربة المستخدم وتسهيل التفاعل مع المنتج." data-en="We use UI/UX Pro Max to craft intuitive, professional interfaces focused on user experience and smooth product interaction.">
-          نستخدم UI/UX Pro Max لتصميم واجهات بديهية واحترافية تركز على تجربة المستخدم وتسهيل التفاعل مع المنتج.
-        </p>
-      </div>
-
-      <div class="rounded-2xl border border-violet-400/20 bg-violet-500/5 p-6">
-        <div class="flex items-center gap-3 mb-4">
-          <span class="text-xl font-black text-white">Testsprite</span>
-          <span class="rounded-full border border-violet-400/20 bg-violet-400/10 px-2.5 py-1 text-[11px] font-semibold text-violet-300" data-ar="اختبارات" data-en="Testing">Testing</span>
-        </div>
-        <p class="text-slate-400 leading-relaxed text-sm" data-ar="نستخدم Testsprite لإجراء اختبارات ذكية ومستمرة، مما يساعدنا على اكتشاف المشاكل مبكراً وتحسين جودة المنتج قبل الإطلاق." data-en="We use Testsprite for smart, continuous testing so we can catch issues early and improve product quality before launch.">
-          نستخدم Testsprite لإجراء اختبارات ذكية ومستمرة، مما يساعدنا على اكتشاف المشاكل مبكراً وتحسين جودة المنتج قبل الإطلاق.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ PRICING (الباقات والأسعار) ============ -->
-<section id="pricing" class="relative z-10 px-5 md:px-8 py-20 md:py-28 max-w-7xl mx-auto">
+<section id="portfolio" role="region" aria-label="Portfolio Section" data-testid="portfolio-section" class="relative z-10 px-5 md:px-8 py-20 md:py-28 max-w-7xl mx-auto">
   <div class="text-center max-w-2xl mx-auto mb-16 fade-in">
-    <p class="text-cyan-400 font-mono text-sm mb-3 tracking-widest" data-ar="// باقاتنا" data-en="// Our Pricing">// باقاتنا</p>
-    <h2 class="text-3xl md:text-5xl font-black text-white" data-ar="خطط أسعار مرنة ومناسبة" data-en="Flexible Pricing Plans">خطط أسعار مرنة ومناسبة</h2>
-  </div>
-
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
-    <!-- الباقة الاقتصادية -->
-    <div class="grad-border glass p-8 rounded-2xl flex flex-col justify-between fade-in transform hover:-translate-y-2 transition duration-300">
-      <div>
-        <h3 class="text-xl font-bold mb-2 text-white" data-ar="الباقة الاقتصادية" data-en="Economy Plan">الباقة الاقتصادية</h3>
-        <p class="text-slate-400 text-xs mb-6" data-ar="مناسبة للمشاريع الناشئة والمطاعم" data-en="Perfect for startups & restaurants">مناسبة للمشاريع الناشئة والمطاعم</p>
-        <div class="text-3xl font-black mb-6 text-[#2DE2E6]" data-ar="طلب خاص" data-en="Custom Quote">طلب خاص</div>
-        <ul class="space-y-3 text-slate-300 mb-8 text-sm text-right">
-          <li class="flex items-center gap-2"><span class="text-cyan-400">🔹</span> <span data-ar="صفحة واحدة احترافية (Landing Page)" data-en="Professional Landing Page (1 Page)">صفحة واحدة احترافية (Landing Page)</span></li>
-          <li class="flex items-center gap-2"><span class="text-cyan-400">🔹</span> <span data-ar="متوافق مع الموبايل 100%" data-en="100% Mobile Responsive">متوافق مع الموبايل 100%</span></li>
-          <li class="flex items-center gap-2"><span class="text-cyan-400">🔹</span> <span data-ar="ربط سريع بزرار الواتساب" data-en="Quick WhatsApp Integration">ربط سريع بزرار الواتساب</span></li>
-        </ul>
-      </div>
-      <a href="https://wa.me/201200523247?text=أرغب%20في%20طلب%20الباقة%20الاقتصادية" target="_blank" class="block w-full py-3 bg-transparent border border-[#2DE2E6] text-[#2DE2E6] rounded-xl font-bold text-center hover:bg-[#2DE2E6] hover:text-[#060915] transition-all" data-ar="اطلب الآن" data-en="Order Now">اطلب الآن</a>
-    </div>
-
-    <!-- باقة الشركات والعيادات -->
-    <div class="bg-[#0d1225]/80 backdrop-blur-xl p-8 rounded-2xl border-2 border-[#A855F7] shadow-glow-violet relative flex flex-col justify-between fade-in scale-105">
-      <span class="absolute -top-4 right-1/4 left-1/4 bg-[#A855F7] text-ink text-xs font-black py-1 px-3 rounded-full text-center" data-ar="الأكثر طلباً 🔥" data-en="Most Popular 🔥">الأكثر طلباً 🔥</span>
-      <div>
-        <h3 class="text-xl font-bold mb-2 mt-2 text-white" data-ar="باقة الشركات والعيادات" data-en="Business & Clinics Plan">باقة الشركات والعيادات</h3>
-        <p class="text-slate-400 text-xs mb-6" data-ar="مثالية للعيادات والشركات المتوسطة" data-en="Ideal for clinics and medium companies">مثالية للعيادات والشركات المتوسطة</p>
-        <div class="text-3xl font-black mb-6 text-[#A855F7]" data-ar="طلب خاص" data-en="Custom Quote">طلب خاص</div>
-        <ul class="space-y-3 text-slate-300 mb-8 text-sm text-right">
-          <li class="flex items-center gap-2"><span class="text-violet-400">✨</span> <span data-ar="موقع متعدد الصفحات (حتى 5 صفحات)" data-en="Multi-page Website (Up to 5 Pages)">موقع متعدد الصفحات (حتى 5 صفحات)</span></li>
-          <li class="flex items-center gap-2"><span class="text-violet-400">✨</span> <span data-ar="تهيئة كاملة للسيو SEO والكود" data-en="Full SEO Optimization & Clean Code">تهيئة كاملة للسيو SEO والكود</span></li>
-          <li class="flex items-center gap-2"><span class="text-violet-400">✨</span> <span data-ar="حجز مواعيد أونلاين ونظام ذكي" data-en="Online Appointment Booking System">حجز مواعيد أونلاين ونظام ذكي</span></li>
-        </ul>
-      </div>
-      <a href="https://wa.me/201200523247?text=أرغب%20في%20طلب%20باقة%20الشركات%20والعيادات" target="_blank" class="block w-full py-3 bg-[#A855F7] text-[#060915] rounded-xl font-bold text-center hover:bg-white hover:text-[#A855F7] transition-all shadow-[0_0_15px_#A855F7]" data-ar="اطلب الآن" data-en="Order Now">اطلب الآن</a>
-    </div>
-
-    <!-- باقة المتجر المتكامل -->
-    <div class="grad-border glass p-8 rounded-2xl flex flex-col justify-between fade-in transform hover:-translate-y-2 transition duration-300">
-      <div>
-        <h3 class="text-xl font-bold mb-2 text-white" data-ar="باقة المتجر المتكامل" data-en="E-Commerce Plan">باقة المتجر المتكامل</h3>
-        <p class="text-slate-400 text-xs mb-6" data-ar="منصة بيع متكاملة لعرض منتجاتك" data-en="Complete Digital Store for Your Products">منصة بيع متكاملة لعرض منتجاتك</p>
-        <div class="text-3xl font-black mb-6 text-[#2DE2E6]" data-ar="طلب خاص" data-en="Custom Quote">طلب خاص</div>
-        <ul class="space-y-3 text-slate-300 mb-8 text-sm text-right">
-          <li class="flex items-center gap-2"><span class="text-cyan-400">🔹</span> <span data-ar="إضافة عدد غير محدود من المنتجات" data-en="Unlimited Products Listing">إضافة عدد غير محدود من المنتجات</span></li>
-          <li class="flex items-center gap-2"><span class="text-cyan-400">🔹</span> <span data-ar="سلة مشتريات ذكية ونظام دفع" data-en="Smart Cart & Checkout System">سلة مشتريات ذكية ونظام دفع</span></li>
-          <li class="flex items-center gap-2"><span class="text-cyan-400">🔹</span> <span data-ar="تقارير مبيعات كاملة وسهلة" data-en="Comprehensive Sales Analytics">تقارير مبيعات كاملة وسهلة</span></li>
-        </ul>
-      </div>
-      <a href="https://wa.me/201200523247?text=أرغب%20في%20طلب%20باقة%20المتجر%20المتكامل" target="_blank" class="block w-full py-3 bg-transparent border border-[#2DE2E6] text-[#2DE2E6] rounded-xl font-bold text-center hover:bg-[#2DE2E6] hover:text-[#060915] transition-all" data-ar="اطلب الآن" data-en="Order Now">اطلب الآن</a>
-    </div>
-  </div>
-</section>
-
-<!-- ============ PORTFOLIO ============ -->
-<section id="portfolio" role="region" aria-labelledby="portfolioHeading" data-testid="portfolio-section" class="relative z-10 px-5 md:px-8 py-20 md:py-28 max-w-7xl mx-auto">
-  <div class="text-center max-w-2xl mx-auto mb-16 fade-in">
-    <p class="text-violet-400 font-mono text-sm mb-3 tracking-widest" data-ar="// أعمالنا" data-en="// Our Work">// أعمالنا</p>
-    <h2 id="portfolioHeading" class="text-3xl md:text-5xl font-black text-white" data-ar="مشاريع تتحدث عن نفسها" data-en="Projects That Speak for Themselves">مشاريع تتحدث عن نفسها</h2>
+    <p class="text-violet-400 font-mono text-sm mb-3 tracking-widest" data-ar="// أعمالنا" data-en="// Our Work">// Our Work</p>
+    <h2 class="text-3xl md:text-5xl font-black text-white" data-ar="مشاريع تتحدث عن نفسها" data-en="Projects That Speak for Themselves">Portfolio / مشاريع تتحدث عن نفسها</h2>
   </div>
 
   <div class="grid md:grid-cols-3 gap-6">
-    <!-- المشروع الأول: موقع عيادة النخبة لطب الأسنان -->
     <div class="portfolio-card fade-in rounded-2xl overflow-hidden glass border border-slate-700/40">
       <div class="h-48 bg-gradient-to-br from-cyan-500/20 to-violet-600/20 flex flex-col items-center justify-center border-b border-slate-700/50 p-4">
         <svg class="w-14 h-14 text-cyan-300 mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -426,13 +321,12 @@
         <span class="text-xs font-mono bg-cyan-500/10 text-cyan-300 px-2 py-0.5 rounded border border-cyan-400/20">LIVE PROJECT</span>
       </div>
       <div class="p-6">
-        <p class="text-xs font-mono text-cyan-400 mb-2" data-ar="موقع عيادة طبية احترافي" data-en="Medical & Dental Clinic Website">موقع عيادة طبية احترافي</p>
-        <h3 class="text-lg font-bold text-white mb-2" data-ar="عيادة النخبة لطب الأسنان" data-en="Elite Dental Clinic">عيادة النخبة لطب الأسنان</h3>
+        <p class="text-xs font-mono text-cyan-400 mb-2" data-ar="موقع عيادة طبية احترافي" data-en="Medical & Dental Clinic Website">Medical & Dental Clinic Website</p>
+        <h3 class="text-lg font-bold text-white mb-2" data-ar="عيادة النخبة لطب الأسنان" data-en="Elite Dental Clinic">Elite Dental Clinic / عيادة النخبة لطب الأسنان</h3>
         <p class="text-slate-400 text-sm mb-4" data-ar="موقع ويب متكامل لعيادة أسنان يتميز بنظام حجز مواعيد ذكي، عرض الخدمات، وتصميم متجاوب تماماً يسهل وصول المرضى." data-en="A comprehensive dental clinic platform featuring an online appointment system, service showcase, and responsive design.">موقع ويب متكامل لعيادة أسنان يتميز بنظام حجز مواعيد ذكي، عرض الخدمات، وتصميم متجاوب تماماً يسهل وصول المرضى.</p>
       </div>
     </div>
 
-    <!-- المشروع الثاني: معرض الأعمال الشخصي (Ahmed Mohsen Portfolio) -->
     <div class="portfolio-card fade-in rounded-2xl overflow-hidden glass border border-slate-700/40">
       <div class="h-48 bg-gradient-to-br from-violet-600/20 to-cyan-500/20 flex flex-col items-center justify-center border-b border-slate-700/50 p-4">
         <svg class="w-14 h-14 text-violet-300 mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -442,13 +336,12 @@
         <span class="text-xs font-mono bg-violet-500/10 text-violet-300 px-2 py-0.5 rounded border border-violet-400/20">LIVE PROJECT</span>
       </div>
       <div class="p-6">
-        <p class="text-xs font-mono text-violet-400 mb-2" data-ar="معرض أعمال شخصي وسيرة ذاتية" data-en="Personal Portfolio & CV Website">معرض أعمال شخصي وسيرة ذاتية</p>
-        <h3 class="text-lg font-bold text-white mb-2" data-ar="معرض المطور أحمد محسن" data-en="Ahmed Mohsen Portfolio">معرض المطور أحمد محسن</h3>
+        <p class="text-xs font-mono text-violet-400 mb-2" data-ar="معرض أعمال شخصي وسيرة ذاتية" data-en="Personal Portfolio & CV Website">Personal Portfolio & CV Website</p>
+        <h3 class="text-lg font-bold text-white mb-2" data-ar="معرض المطور أحمد محسن" data-en="Ahmed Mohsen Portfolio">Ahmed Mohsen Portfolio / معرض المطور أحمد محسن</h3>
         <p class="text-slate-400 text-sm mb-4" data-ar="موقع شخصي يعرض المهارات البرمجية والمشاريع السابقة بأسلوب الـ Minimalist الحديث لزيادة الثقة وجذب العملاء." data-en="A professional personal website showcasing developer skills and technical projects with a modern minimalist look.">موقع شخصي يعرض المهارات البرمجية والمشاريع السابقة بأسلوب الـ Minimalist الحديث لزيادة الثقة وجذب العملاء.</p>
       </div>
     </div>
 
-    <!-- المشروع الثالث: مساعد ذكاء اصطناعي (Nova Assistant) -->
     <div class="portfolio-card fade-in rounded-2xl overflow-hidden glass border border-slate-700/40">
       <div class="h-48 bg-gradient-to-br from-cyan-500/20 to-violet-600/20 flex flex-col items-center justify-center border-b border-slate-700/50 p-4">
         <svg class="w-14 h-14 text-cyan-300 mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -458,197 +351,71 @@
         <span class="text-xs font-mono bg-cyan-500/10 text-cyan-300 px-2 py-0.5 rounded border border-cyan-400/20">AI INTEGRATION</span>
       </div>
       <div class="p-6">
-        <p class="text-xs font-mono text-cyan-400 mb-2" data-ar="روبوت محادثة ذكي ومدمج" data-en="AI Chat Assistant">روبوت محادثة ذكي ومدمج</p>
-        <h3 class="text-lg font-bold text-white mb-2" data-ar="مساعد نوفا الذكي" data-en="Nova Assistant">مساعد نوفا الذكي</h3>
+        <p class="text-xs font-mono text-cyan-400 mb-2" data-ar="روبوت محادثة ذكي ومدمج" data-en="AI Chat Assistant">AI Chat Assistant</p>
+        <h3 class="text-lg font-bold text-white mb-2" data-ar="مساعد نوفا الذكي" data-en="Nova Assistant">Nova Assistant / مساعد نوفا الذكي</h3>
         <p class="text-slate-400 text-sm mb-4" data-ar="مساعد ذكاء اصطناعي مخصص للمواقع، يجيب على استفسارات العملاء تلقائياً على مدار الساعة ويزيد نسبة المبيعات." data-en="An AI assistant answering customer inquiries automatically, around the clock, increasing engagement.">مساعد ذكاء اصطناعي مخصص للمواقع، يجيب على استفسارات العملاء تلقائياً على مدار الساعة ويزيد نسبة المبيعات.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ ABOUT (brief) ============ -->
-<section id="about" class="relative z-10 px-5 md:px-8 py-20 md:py-28 max-w-6xl mx-auto" data-section="about">
-  <div class="about-shell glass rounded-[28px] p-8 md:p-10 lg:p-12 relative overflow-hidden">
-    <div class="relative grid lg:grid-cols-[1.1fr_0.9fr] gap-8 items-center">
-      <div class="text-center lg:text-right">
-        <p class="text-cyan-400 font-mono text-sm mb-3 tracking-widest fade-in" data-ar="// من نحن" data-en="// About Us">// من نحن</p>
-        <h2 class="fade-in text-3xl md:text-5xl font-black text-white mb-6" data-ar="فريق شغوف بالتقنية والنتائج" data-en="A Team Obsessed With Tech & Results">فريق شغوف بالتقنية والنتائج</h2>
-        <p class="fade-in text-slate-400 text-base md:text-lg leading-relaxed max-w-3xl mx-auto lg:mx-0"
-           data-ar="في NovaTech، نجمع بين خبرة هندسية عميقة ورؤية تصميمية حديثة لنبني منتجات رقمية تنافس عالمياً. نؤمن أن كل مشروع يستحق كوداً نظيفاً، وتصميماً مدروساً، وشراكة حقيقية من الفكرة حتى الإطلاق."
-           data-en="At NovaTech, we combine deep engineering expertise with a modern design sensibility to build digital products that compete globally. We believe every project deserves clean code, thoughtful design, and a real partnership from idea to launch.">
-          في NovaTech، نجمع بين خبرة هندسية عميقة ورؤية تصميمية حديثة لنبني منتجات رقمية تنافس عالمياً. نؤمن أن كل مشروع يستحق كوداً نظيفاً، وتصميماً مدروساً، وشراكة حقيقية من الفكرة حتى الإطلاق.
-        </p>
-        <div class="fade-in mt-8 flex flex-wrap justify-center lg:justify-start gap-3">
-          <span class="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1.5 text-sm text-cyan-300" data-ar="كود نظيف" data-en="Clean Code">كود نظيف</span>
-          <span class="rounded-full border border-violet-400/20 bg-violet-400/10 px-3 py-1.5 text-sm text-violet-300" data-ar="تصميم احترافي" data-en="Professional Design">تصميم احترافي</span>
-          <span class="rounded-full border border-slate-600/60 bg-white/5 px-3 py-1.5 text-sm text-slate-300" data-ar="شراكة حقيقية" data-en="Real Partnership">شراكة حقيقية</span>
-        </div>
-      </div>
-
-      <div class="fade-in rounded-2xl border border-slate-700/60 bg-slate-950/40 p-6 md:p-7">
-        <div class="flex items-center gap-3 mb-5">
-          <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-400 to-violet-500 text-ink font-black">N</div>
-          <div>
-            <p class="text-sm font-semibold text-cyan-300" data-ar="منصة رقمية حديثة" data-en="Modern Digital Studio">منصة رقمية حديثة</p>
-            <p class="text-xs text-slate-400" data-ar="بناء حلول تركز على النتائج" data-en="Building results-driven solutions">بناء حلول تركز على النتائج</p>
-          </div>
-        </div>
-        <div class="space-y-3 text-sm text-slate-300">
-          <div class="rounded-xl border border-slate-700/60 bg-white/5 p-3">
-            <p class="font-semibold text-white" data-ar="التركيز على المستخدم" data-en="User-First Thinking">التركيز على المستخدم</p>
-            <p class="text-slate-400 mt-1" data-ar="نصمم تجارب تضع العميل في قلب القرار." data-en="We design experiences that put the client at the center of every decision.">نصمم تجارب تضع العميل في قلب القرار.</p>
-          </div>
-          <div class="rounded-xl border border-slate-700/60 bg-white/5 p-3">
-            <p class="font-semibold text-white" data-ar="سرعة واحترافية" data-en="Speed and Professionalism">سرعة واحترافية</p>
-            <p class="text-slate-400 mt-1" data-ar="نقدّم نتائج سريعة مع جودة عالية من أول يوم." data-en="We deliver fast results without compromising quality from day one.">نقدّم نتائج سريعة مع جودة عالية من أول يوم.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CONTACT / FOOTER ============ -->
-<footer id="contact" class="relative z-10 px-5 md:px-8 pt-20 pb-10 mt-10 border-t border-slate-800/70">
-  <div class="max-w-4xl mx-auto text-center mb-16 fade-in">
-    <h2 class="text-3xl md:text-5xl font-black text-white mb-5" data-ar="لنبدأ مشروعك القادم" data-en="Let's Start Your Next Project">لنبدأ مشروعك القادم</h2>
-    <p class="text-slate-400 mb-8" data-ar="تواصل معنا الآن واحصل على استشارة مجانية خلال 24 ساعة." data-en="Reach out now and get a free consultation within 24 hours.">تواصل معنا الآن واحصل على استشارة مجانية خلال 24 ساعة.</p>
-    <a href="https://wa.me/201200523247?text=مرحباً%20NovaTech،%20أرغب%20بمناقشة%20مشروعي"
-       target="_blank"
-       class="btn-glow inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-cyan-400 to-violet-500 px-8 py-4 font-bold text-ink shadow-glow-cyan">
-      <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11 11 0 0 0 3 17.4L2 22l4.7-1a11 11 0 0 0 16-16.5Zm-8.6 16.9a9 9 0 0 1-4.6-1.3l-.3-.2-3.1.8.8-3-.2-.3a9 9 0 1 1 7.4 4Zm5-6.7c-.3-.1-1.6-.8-1.9-.9-.2-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.5.1-1.5-.7-2.4-1.3-3.4-2.9-.2-.4.2-.4.6-1.2.1-.2 0-.4 0-.5L9.4 7.3c-.2-.4-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-1 1-1 2.3s1 2.7 1.1 2.9c.1.2 2 3 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.6-.7 1.9-1.3.2-.6.2-1.1.2-1.3-.1-.1-.3-.2-.5-.3Z"/></svg>
-      <span data-ar="تواصل عبر واتساب" data-en="Chat on WhatsApp">تواصل عبر واتساب</span>
-    </a>
-  </div>
-
-  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 pt-8 border-t border-slate-800/70">
-    <div class="flex items-center gap-2">
-      <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-cyan-400 to-violet-500">
-        <span class="font-mono font-bold text-ink text-xs">N</span>
-      </span>
-      <span class="font-bold text-white">Nova<span class="text-gradient">Tech</span></span>
-    </div>
-
-    <div class="flex items-center gap-4">
-      <a href="#" aria-label="WhatsApp" class="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center text-slate-400 hover:text-cyan-300 hover:border-cyan-400/40 transition">
-        <svg class="w-4.5 h-4.5" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11 11 0 0 0 3 17.4L2 22l4.7-1a11 11 0 0 0 16-16.5Zm-8.6 16.9a9 9 0 0 1-4.6-1.3l-.3-.2-3.1.8.8-3-.2-.3a9 9 0 1 1 7.4 4Z"/></svg>
-      </a>
-      <a href="#" aria-label="Instagram" class="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center text-slate-400 hover:text-violet-300 hover:border-violet-400/40 transition">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.5"/><circle cx="17.2" cy="6.8" r="1"/></svg>
-      </a>
-      <a href="#" aria-label="LinkedIn" class="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center text-slate-400 hover:text-cyan-300 hover:border-cyan-400/40 transition">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.53 4.78 5.83V21h-4v-5.7c0-1.36-.03-3.1-1.9-3.1-1.9 0-2.2 1.47-2.2 3v5.8h-4V9Z"/></svg>
-      </a>
-      <a href="#" aria-label="X" class="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center text-slate-400 hover:text-violet-300 hover:border-violet-400/40 transition">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4l7.2 9.4L4.3 20H6l6-6.6 4.8 6.6H20l-7.6-9.9L19 4h-1.7l-5.5 6-4.4-6H4Z"/></svg>
-      </a>
-    </div>
-
-    <p class="text-slate-500 text-sm" data-ar="© 2026 نوفاتك. جميع الحقوق محفوظة." data-en="© 2026 NovaTech. All rights reserved.">© 2026 NovaTech. All rights reserved.</p>
-  </div>
-</footer>
-
-<button id="backToTop" class="back-to-top fixed bottom-6 left-6 z-[60] inline-flex h-12 w-12 items-center justify-center rounded-full border border-cyan-400/30 bg-slate-950/90 text-cyan-300 shadow-glow-cyan backdrop-blur" aria-label="Back to Top">
-  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 15 7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-</button>
-
 <script>
-  // ---------- Language toggle ----------
-  let currentLang = 'ar';
-  const langToggle = document.getElementById('langToggle');
-  const langLabel = document.getElementById('langLabel');
-  const translatable = document.querySelectorAll('[data-ar]');
-
-  function applyLang(lang){
-    document.documentElement.lang = lang;
-    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-    translatable.forEach(el => {
-      el.textContent = lang === 'ar' ? el.getAttribute('data-ar') : el.getAttribute('data-en');
-    });
-    langLabel.textContent = lang === 'ar' ? 'English' : 'العربية';
-    document.title = lang === 'ar' ? 'NovaTech | نوفاتك' : 'NovaTech | Digital Agency';
-  }
-
-  langToggle.addEventListener('click', () => {
-    currentLang = currentLang === 'ar' ? 'en' : 'ar';
-    applyLang(currentLang);
-  });
-
-  // ---------- Mobile menu ----------
+  // 1. كود تشغيل القائمة للموبايل (Responsive Menu)
   const menuBtn = document.getElementById('menuBtn');
   const mobileMenu = document.getElementById('mobileMenu');
-  menuBtn.addEventListener('click', () => {
-    const isHidden = mobileMenu.classList.toggle('hidden');
-    menuBtn.setAttribute('aria-expanded', String(!isHidden));
-    menuBtn.setAttribute('aria-label', isHidden ? 'Open navigation menu' : 'Close navigation menu');
-  });
-  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-    mobileMenu.classList.add('hidden');
-    menuBtn.setAttribute('aria-expanded', 'false');
-    menuBtn.setAttribute('aria-label', 'Open navigation menu');
-  }));
 
-  // ---------- Smooth in-page navigation ----------
-  function scrollToSection(selector) {
-    const target = document.querySelector(selector);
-    if (!target) return;
-    const rect = target.getBoundingClientRect();
-    const top = Math.max(rect.top + window.scrollY - 90, 0);
-    window.scrollTo({ top, behavior: 'auto' });
-  }
-
-  document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener('click', (event) => {
-      const href = link.getAttribute('href');
-      if (!href || href === '#') return;
-      event.preventDefault();
-      if (history.pushState) {
-        history.pushState(null, '', href);
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener('click', () => {
+      const isHidden = mobileMenu.classList.contains('hidden');
+      if (isHidden) {
+        mobileMenu.classList.remove('hidden');
+        menuBtn.setAttribute('aria-expanded', 'true');
       } else {
-        location.hash = href;
-      }
-      scrollToSection(href);
-      if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
         mobileMenu.classList.add('hidden');
         menuBtn.setAttribute('aria-expanded', 'false');
-        menuBtn.setAttribute('aria-label', 'Open navigation menu');
       }
     });
-  });
 
-  window.addEventListener('hashchange', () => {
-    scrollToSection(window.location.hash);
-  });
-
-  // ---------- Back to top button ----------
-  const backToTop = document.getElementById('backToTop');
-  const showBackToTop = () => {
-    if (window.scrollY > 350) {
-      backToTop.classList.add('show');
-    } else {
-      backToTop.classList.remove('show');
-    }
-  };
-  window.addEventListener('scroll', showBackToTop, { passive: true });
-  backToTop.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-  showBackToTop();
-
-  // ---------- Scroll reveal ----------
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting){
-        entry.target.classList.add('show');
-        observer.unobserve(entry.target);
-      }
+    // إغلاق المنيو عند الضغط على أي رابط بداخلها
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      });
     });
-  }, { threshold: 0.15 });
-  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  }
 
-  // initialize
-  applyLang(currentLang);
+  // 2. كود تبديل اللغة الاحترافي (Language Switching)
+  const langToggle = document.getElementById('langToggle');
+  const langLabel = document.getElementById('langLabel');
+  let currentLang = 'ar';
 
+  if (langToggle) {
+    langToggle.addEventListener('click', () => {
+      currentLang = currentLang === 'ar' ? 'en' : 'ar';
+      
+      // تحديث الاتجاه واللغة في ترويسة HTML
+      document.documentElement.lang = currentLang;
+      document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+      
+      // تحديث تسمية الزر
+      if (langLabel) {
+        langLabel.innerText = currentLang === 'ar' ? 'English' : 'العربية';
+      }
+
+      // البحث عن كل العناصر المترجمة وتبديل نصوصها
+      document.querySelectorAll('[data-ar]').forEach(el => {
+        const arText = el.getAttribute('data-ar');
+        const enText = el.getAttribute('data-en');
+        if (currentLang === 'ar' && arText) {
+          el.innerText = arText;
+        } else if (currentLang === 'en' && enText) {
+          el.innerText = enText;
+        }
+      });
+    });
+  }
 </script>
+
 </body>
 </html>
