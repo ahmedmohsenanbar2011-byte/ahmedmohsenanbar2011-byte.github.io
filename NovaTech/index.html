@@ -194,31 +194,31 @@
     </a>
 
     <div class="hidden md:flex items-center gap-8 font-semibold text-sm text-slate-300">
-      <a href="#services" class="nav-link" data-ar="خدماتنا" data-en="Services">خدماتنا</a>
-      <a href="#pricing" class="nav-link" data-ar="باقاتنا" data-en="Pricing">باقاتنا</a>
-      <a href="#portfolio" class="nav-link" data-ar="أعمالنا" data-en="Portfolio">أعمالنا</a>
-      <a href="#about" class="nav-link" data-ar="من نحن" data-en="About">من نحن</a>
-      <a href="#contact" class="nav-link" data-ar="تواصل معنا" data-en="Contact">تواصل معنا</a>
+      <a href="#services" class="nav-link" data-ar="خدماتنا" data-en="Services" data-testid="nav-services-link">خدماتنا</a>
+      <a href="#pricing" class="nav-link" data-ar="باقاتنا" data-en="Pricing" data-testid="nav-pricing-link">باقاتنا</a>
+      <a href="#portfolio" class="nav-link" data-ar="أعمالنا" data-en="Portfolio" data-testid="nav-portfolio-link">أعمالنا</a>
+      <a href="#about" class="nav-link" data-ar="من نحن" data-en="About" data-testid="nav-about-link">من نحن</a>
+      <a href="#contact" class="nav-link" data-ar="تواصل معنا" data-en="Contact" data-testid="nav-contact-link">تواصل معنا</a>
     </div>
 
     <div class="flex items-center gap-2">
-      <button id="langToggle" class="flex items-center gap-1.5 rounded-full border border-cyan-400/30 bg-cyan-400/5 px-3.5 py-2 text-xs md:text-sm font-bold text-cyan-300 hover:bg-cyan-400/15 transition">
+      <button id="langToggle" type="button" data-testid="lang-toggle" aria-label="Toggle language" class="flex items-center gap-1.5 rounded-full border border-cyan-400/30 bg-cyan-400/5 px-3.5 py-2 text-xs md:text-sm font-bold text-cyan-300 hover:bg-cyan-400/15 transition">
         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5h7M9 3v2c0 4.4-2.7 8-7 9M5 20l4-9 4 9M6.5 17h5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="17" cy="17" r="4"/></svg>
         <span id="langLabel">English</span>
       </button>
-      <button id="menuBtn" class="md:hidden text-slate-300 p-2">
+      <button id="menuBtn" type="button" data-testid="mobile-menu-toggle" aria-controls="mobileMenu" aria-expanded="false" aria-label="Open navigation menu" class="md:hidden text-slate-300 p-2">
         <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round"/></svg>
       </button>
     </div>
   </nav>
 
   <!-- mobile menu -->
-  <div id="mobileMenu" class="hidden md:hidden glass mx-3 mt-2 rounded-2xl px-5 py-4 flex flex-col gap-4 font-semibold text-slate-300">
-    <a href="#services" data-ar="خدماتنا" data-en="Services">خدماتنا</a>
-    <a href="#pricing" data-ar="باقاتنا" data-en="Pricing">باقاتنا</a>
-    <a href="#portfolio" data-ar="أعمالنا" data-en="Portfolio">أعمالنا</a>
-    <a href="#about" data-ar="من نحن" data-en="About">من نحن</a>
-    <a href="#contact" data-ar="تواصل معنا" data-en="Contact">تواصل معنا</a>
+  <div id="mobileMenu" class="hidden md:hidden glass mx-3 mt-2 rounded-2xl px-5 py-4 flex flex-col gap-4 font-semibold text-slate-300" data-testid="mobile-menu">
+    <a href="#services" data-ar="خدماتنا" data-en="Services" data-testid="mobile-nav-services-link">خدماتنا</a>
+    <a href="#pricing" data-ar="باقاتنا" data-en="Pricing" data-testid="mobile-nav-pricing-link">باقاتنا</a>
+    <a href="#portfolio" data-ar="أعمالنا" data-en="Portfolio" data-testid="mobile-nav-portfolio-link">أعمالنا</a>
+    <a href="#about" data-ar="من نحن" data-en="About" data-testid="mobile-nav-about-link">من نحن</a>
+    <a href="#contact" data-ar="تواصل معنا" data-en="Contact" data-testid="mobile-nav-contact-link">تواصل معنا</a>
   </div>
 </header>
 
@@ -275,10 +275,10 @@
 </section>
 
 <!-- ============ SERVICES ============ -->
-<section id="services" class="relative z-10 px-5 md:px-8 py-20 md:py-28 max-w-7xl mx-auto">
+<section id="services" role="region" aria-labelledby="servicesHeading" data-testid="services-section" class="relative z-10 px-5 md:px-8 py-20 md:py-28 max-w-7xl mx-auto">
   <div class="text-center max-w-2xl mx-auto mb-16 fade-in">
     <p class="text-cyan-400 font-mono text-sm mb-3 tracking-widest" data-ar="// خدماتنا" data-en="// Our Services">// خدماتنا</p>
-    <h2 class="text-3xl md:text-5xl font-black text-white" data-ar="حلول رقمية متكاملة" data-en="Complete Digital Solutions">حلول رقمية متكاملة</h2>
+    <h2 id="servicesHeading" class="text-3xl md:text-5xl font-black text-white" data-ar="حلول رقمية متكاملة" data-en="Complete Digital Solutions">حلول رقمية متكاملة</h2>
   </div>
 
   <div class="grid md:grid-cols-3 gap-6">
@@ -409,10 +409,10 @@
 </section>
 
 <!-- ============ PORTFOLIO ============ -->
-<section id="portfolio" class="relative z-10 px-5 md:px-8 py-20 md:py-28 max-w-7xl mx-auto">
+<section id="portfolio" role="region" aria-labelledby="portfolioHeading" data-testid="portfolio-section" class="relative z-10 px-5 md:px-8 py-20 md:py-28 max-w-7xl mx-auto">
   <div class="text-center max-w-2xl mx-auto mb-16 fade-in">
     <p class="text-violet-400 font-mono text-sm mb-3 tracking-widest" data-ar="// أعمالنا" data-en="// Our Work">// أعمالنا</p>
-    <h2 class="text-3xl md:text-5xl font-black text-white" data-ar="مشاريع تتحدث عن نفسها" data-en="Projects That Speak for Themselves">مشاريع تتحدث عن نفسها</h2>
+    <h2 id="portfolioHeading" class="text-3xl md:text-5xl font-black text-white" data-ar="مشاريع تتحدث عن نفسها" data-en="Projects That Speak for Themselves">مشاريع تتحدث عن نفسها</h2>
   </div>
 
   <div class="grid md:grid-cols-3 gap-6">
@@ -577,8 +577,16 @@
   // ---------- Mobile menu ----------
   const menuBtn = document.getElementById('menuBtn');
   const mobileMenu = document.getElementById('mobileMenu');
-  menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+  menuBtn.addEventListener('click', () => {
+    const isHidden = mobileMenu.classList.toggle('hidden');
+    menuBtn.setAttribute('aria-expanded', String(!isHidden));
+    menuBtn.setAttribute('aria-label', isHidden ? 'Open navigation menu' : 'Close navigation menu');
+  });
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    mobileMenu.classList.add('hidden');
+    menuBtn.setAttribute('aria-expanded', 'false');
+    menuBtn.setAttribute('aria-label', 'Open navigation menu');
+  }));
 
   // ---------- Smooth in-page navigation ----------
   function scrollToSection(selector) {
@@ -594,10 +602,16 @@
       const href = link.getAttribute('href');
       if (!href || href === '#') return;
       event.preventDefault();
-      location.hash = href;
+      if (history.pushState) {
+        history.pushState(null, '', href);
+      } else {
+        location.hash = href;
+      }
       scrollToSection(href);
       if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
         mobileMenu.classList.add('hidden');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        menuBtn.setAttribute('aria-label', 'Open navigation menu');
       }
     });
   });
@@ -636,7 +650,5 @@
   applyLang(currentLang);
 
 </script>
-</body>
-</html>
 </body>
 </html>
